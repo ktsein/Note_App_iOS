@@ -11,9 +11,16 @@ export default class NoteScreen extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <TextInput placeholder="Untitled"
-          style={styles.title}/>
-        <TextInput multiline={true}
+        <TextInput
+          ref="title"
+          autoFocus={true}
+          placeholder="Untitled"
+          style={styles.title}
+          onEndEditing={(text) => {this.refs.body.focus()}}
+          />
+        <TextInput
+          ref="body"
+          multiline={true}
           placeholder="Start typing" style={styles.body} />
       </View>
     );
