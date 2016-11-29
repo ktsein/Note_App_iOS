@@ -15,7 +15,7 @@ export default class HomeScreen extends Component {
         <Text style={styles.noNotesText}>No Notes created yet!</Text>
         <SimpleButton
           onPress={() => this.props.navigator.push({
-            name: 'creatNote'
+            name: 'createNote'
           })}
           customText="Create Note"
           style={styles.simpleButton}
